@@ -140,7 +140,7 @@ export function CalculatorWorkbench() {
       setOffers(filtered);
       setNormalizationMeta({
         durationMs: json.durationMs,
-        confidence: json.aggregatedConfidence,
+        confidence: json.confidence,
         detectedCount: filtered.length,
       });
 
@@ -415,12 +415,12 @@ export function CalculatorWorkbench() {
                               {offer.value ? formatCurrency(offer.value) : '-'}
                             </td>
                             <td className="py-3 px-2 text-center">
-                              {offer.status === 'included' ? (
+                              {offer.status === 'in-range' ? (
                                 <span className="inline-flex items-center gap-1 px-2 py-1 bg-green-100 text-green-700 rounded-full text-xs font-medium">
                                   <CheckCircle className="h-3 w-3" />
                                   Dahil
                                 </span>
-                              ) : offer.status === 'outlier' ? (
+                              ) : offer.status === 'out-of-range' ? (
                                 <span className="inline-flex items-center gap-1 px-2 py-1 bg-amber-100 text-amber-700 rounded-full text-xs font-medium">
                                   <AlertTriangle className="h-3 w-3" />
                                   Aykırı
@@ -443,11 +443,11 @@ export function CalculatorWorkbench() {
               <div className="grid gap-6 md:grid-cols-2">
                 <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-6">
                   <h4 className="text-sm font-semibold text-slate-900 mb-4">Teklif Dağılımı</h4>
-                  <OfferDistributionChart result={result} />
+                  <OfferDistributionChart offers={result.offers} sd={result.summary.sd} tort1={result.summary.tort1} tort2={result.summary.tort2} />
                 </div>
                 <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-6">
                   <h4 className="text-sm font-semibold text-slate-900 mb-4">Durum Özeti</h4>
-                  <OfferStatusDonutChart result={result} />
+                  <OfferStatusDonutChart offers={result.offers} />
                 </div>
               </div>
 

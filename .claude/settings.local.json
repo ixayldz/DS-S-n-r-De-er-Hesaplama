@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl -s http://localhost:3000/api/calculate -X POST -H \"Content-Type: application/json\" -d '{\"\"approxCost\"\":50000000,\"\"offers\"\":[{\"\"id\"\":\"\"1\"\",\"\"raw\"\":\"\"ABC\"\",\"\"value\"\":45250000.5,\"\"status\"\":\"\"in-range\"\"},{\"\"id\"\":\"\"2\"\",\"\"raw\"\":\"\"XYZ\"\",\"\"value\"\":47830000,\"\"status\"\":\"\"in-range\"\"}],\"\"nCoefficient\"\":1}')",
+      "Bash(curl -s http://localhost:3000/api/cache/clear -X POST)",
+      "Bash(curl -s -X POST http://localhost:3000/api/normalize -H \"Content-Type: application/json\" -d '{\"\"rawInput\"\":\"\"Geçerli teklif 1: 45.250.000,50 TL\\nGeçerli teklif 2: 47.830.000 TL\\nGeçerli teklif 3: 50.120.000 TL\\nGeçersiz teklif: test\"\"}')",
+      "Bash(git add .)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

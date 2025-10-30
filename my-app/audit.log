@@ -34,3 +34,6 @@
 {"timestamp":"2025-10-30T17:34:57.977Z","level":"info","event":"normalize.success","ip":"::1","meta":{"detectedCount":0,"rawCount":1,"confidence":0,"durationMs":9912,"usedFallback":true}}
 {"timestamp":"2025-10-30T17:36:47.625Z","level":"info","event":"normalize.success","ip":"::ffff:192.168.1.198","meta":{"detectedCount":12,"rawCount":12,"confidence":82,"durationMs":659,"usedFallback":true}}
 {"timestamp":"2025-10-30T17:37:50.406Z","level":"info","event":"normalize.success","ip":"::ffff:192.168.1.198","meta":{"detectedCount":12,"rawCount":12,"confidence":82,"durationMs":20388,"usedFallback":false}}
+{"timestamp":"2025-10-30T18:27:51.705Z","level":"info","event":"normalize.success","ip":"::1","meta":{"detectedCount":2,"rawCount":2,"confidence":82,"durationMs":13046,"usedFallback":false}}
+{"timestamp":"2025-10-30T18:29:07.653Z","level":"info","event":"normalize.success","ip":"::1","meta":{"detectedCount":3,"rawCount":4,"confidence":61.5,"durationMs":16880,"usedFallback":false}}
+{"timestamp":"2025-10-30T18:31:16.091Z","level":"info","event":"normalize.success","ip":"::ffff:192.168.1.198","meta":{"detectedCount":12,"rawCount":12,"confidence":82,"durationMs":17776,"usedFallback":false}}
